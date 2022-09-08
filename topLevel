@@ -1,0 +1,16 @@
+from tkinter import *
+ 
+class TopLevelWindow():
+    def __init__(self, master, width, height):
+        self.master = master
+        self.master.geometry("%sx%s+100+100" % (width, height))
+        self.master.title("Toplevel Window")
+ 
+ 
+root = Tk()
+top1 = Toplevel()
+top2 = Toplevel()
+TopLevelWindow(top1, "300", "300")
+TopLevelWindow(top2, "500", "250")
+ 
+root.mainloop()
